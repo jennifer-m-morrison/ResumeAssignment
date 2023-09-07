@@ -1,0 +1,76 @@
+/* 
+Jennifer Morrison 
+September 3, 2023 
+File Name: portfolio.css
+Web 210 - Assignment 3
+
+COLOR PALETTE
+#495867 - Payne's gray
+#DDE6DE - mint cream
+#FBEFE9 - seashell
+#114B5F - midnight green
+#A63F6F - Magenta haze
+#FEFCFF - Almost white
+#333 - dark charcoal
+*/
+
+/* Global Styles 
+------------------------------------------------*/
+body {
+    color: #333;
+}
+
+img {
+    width: 300px;
+}
+
+a {
+    color: #FBEFE9;
+}
+
+/* Profile Section
+------------------------------------------------*/
+header {
+    background-color: #114B5F;
+    color: #FEFCFF;
+}
+
+/* Projects Section
+------------------------------------------------*/
+.projects {
+    background-color: #DDE6DE;
+}
+
+.projects a,
+.education a {
+    color: #114B5f;
+}
+
+.projects .btn {
+    background-color: #114b5f;
+    color: #FEFCFF;
+    text-decoration: none;
+    padding: 0.5em 0.75em;
+    border-radius: 5px;
+}
+
+.projects .btn:hover {
+    background-color: rgba(17, 75, 95, 70%);
+}
+
+
+/* Work Experience Section
+------------------------------------------------*/
+.work-experience {
+    background-color: #FBEFE9;
+}
+
+/* Education Section
+------------------------------------------------*/
+
+/* Contact Information Section
+------------------------------------------------*/
+footer {
+    background-color: #495867;
+    color: #FEFCFF;
+}
