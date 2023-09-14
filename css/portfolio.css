@@ -1,76 +1,165 @@
 /* 
 Jennifer Morrison 
-September 3, 2023 
+September 14, 2023 
 File Name: portfolio.css
-Web 210 - Assignment 3
+Web 210 - Assignment 4
 
-COLOR PALETTE
-#495867 - Payne's gray
-#DDE6DE - mint cream
-#FBEFE9 - seashell
-#114B5F - midnight green
-#A63F6F - Magenta haze
-#FEFCFF - Almost white
-#333 - dark charcoal
+COLOR PALETTE from https: //coolors.co/
+#694F6D - English violet for profile background
+#C4D8DB - Columbia blue for projects background
+#3A5878 - YlnMn blue for work/experience background
+#FFD2C2 - pale dogwood for education section
+#645335 - field drab for footer section
+#FEFCFF - Snow (text for dark background)
+#273B50 - Prussian Blue accent color
 */
 
-/* Global Styles 
-------------------------------------------------*/
-body {
-    color: #333;
+/* Global Styles  ------------------------------------------------*/
+
+/* Set HTML root font-size and border-box styling */
+html {
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* REQUIRED: Added font-family, font-size, and line height to body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* Added border-radius for rounded corners on images */
 img {
     width: 300px;
+    border-radius: 10px;
 }
 
 a {
-    color: #FBEFE9;
-}
-
-/* Profile Section
-------------------------------------------------*/
-header {
-    background-color: #114B5F;
     color: #FEFCFF;
 }
 
-/* Projects Section
-------------------------------------------------*/
+/* REQUIRED: Changed heading font-size and text color; Added text shadow */
+h1 {
+    font-size: 5rem;
+    color: #FEFCFF;
+    text-shadow: 4px 5px 8px #273B50;
+}
+
+/* Changed font-size for h2 */
+h2 {
+    font-size: 2.5rem;
+}
+
+/* REQUIRED: Added font-family and removed bold for h1, h2 */
+h1,
+h2 {
+    font-family: 'Kalam', cursive;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Set container width, margin, and padding */
+.content-wrap {
+    width: 65%;
+    margin: 0 auto;
+    padding: 4em 0;
+}
+
+/* Profile Section ----------------------------------------------------------*/
+
+/* REQUIRED: modified header colors */
+header {
+    background-color: #694F6D;
+    color: #FEFCFF;
+}
+
+/* Projects Section ----------------------------------------------------------*/
+
+/* Added background color */
 .projects {
-    background-color: #DDE6DE;
+    background-color: #C4D8DB;
 }
 
+/* Changed h2 and link text color for projects and education sections */
 .projects a,
+.projects h2,
+.education h2,
 .education a {
-    color: #114B5f;
+    color: #273B50;
 }
 
+/* Button styling for projects section */
 .projects .btn {
-    background-color: #114b5f;
+    background-color: #273B50;
     color: #FEFCFF;
     text-decoration: none;
     padding: 0.5em 0.75em;
     border-radius: 5px;
+    display: inline-block;
 }
 
+/* Added opacity change for button hover state */
 .projects .btn:hover {
-    background-color: rgba(17, 75, 95, 70%);
+    background-color: rgba(39, 59, 80, 70%);
 }
 
+/* REQUIRED: Added overflow property as self-clearing technique for float; added padding and bottom border to separate projects  */
+.project-item {
+    overflow: hidden;
+    padding: 1.5em 0;
+}
 
-/* Work Experience Section
-------------------------------------------------*/
+/* Added bottom border to first project to create separation line for easier readability */
+.project-item:first-of-type {
+    border-bottom: 2px solid #273B50;
+}
+
+/* REQUIRED: Float img to left of container and added margin to right of image */
+.project-item img {
+    float: left;
+    margin-right: 1.5em;
+}
+
+/* Changed text color for h3 and removed top margin */
+.project-item h3 {
+    color: #273B50;
+    margin-top: 0;
+}
+
+/* Work Experience Section -----------------------------------------------------*/
+
+/* Added background color */
 .work-experience {
-    background-color: #FBEFE9;
+    background-color: #3A5878;
+    color: #FEFCFF;
 }
 
-/* Education Section
-------------------------------------------------*/
+/* Education Section  ----------------------------------------------------------*/
 
-/* Contact Information Section
-------------------------------------------------*/
+/* Added background color */
+.education {
+    background-color: #FFD2C2;
+}
+
+/* Contact Information Section ------------------------------------------------*/
+
+/* Added background color */
 footer {
-    background-color: #495867;
+    background-color: #645335;
     color: #FEFCFF;
+}
+
+/* Removed bullet points from footer ul */
+footer ul {
+    list-style: none;
 }
