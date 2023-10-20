@@ -6,6 +6,7 @@ Web 210 - Assignment 4
 
 COLOR PALETTE from https: //coolors.co/
 #694F6D - English violet for profile background
+#E1DBE1 - Light violet for navigation menut
 #C4D8DB - Columbia blue for projects background
 #3A5878 - YlnMn blue for work/experience background
 #FFD2C2 - pale dogwood for education section
@@ -35,7 +36,65 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
     color: #000;
-    line-height: 1.6;
+    line-height: 1.7;
+}
+
+/* Navigation Styles for drop-down menus */
+nav {
+    background-color: #E1DBE1;
+    width: 100%;
+}
+
+nav ul {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    font-size: 1.4rem;
+    display: inline-block;
+    position: relative;
+    padding: 1.2em;
+    cursor: pointer;
+}
+
+nav li a {
+    color: #273B50;
+    text-decoration: none;
+    padding: 0.3em 0.5em;
+}
+
+nav li a:hover {
+    background-color: #273B50;
+    color: #FEFCFF;
+}
+
+nav ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 90px;
+    left: -5000px;
+    width: 250px;
+    background-color: #E1DBE1;
+}
+
+nav ul li ul li {
+    display: block;
+    font-size: 1.1rem;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+nav ul li ul li:hover a {
+    background-color: #273B50;
+    color: #E1DBE1;
+    padding: 0.8em;
+}
+
+nav ul li:hover ul {
+    display: block;
+    left: -20px;
 }
 
 /* Added border-radius for rounded corners on images */
@@ -154,12 +213,20 @@ header {
 /* Contact Information Section ------------------------------------------------*/
 
 /* Added background color */
-footer {
+footer,
+footer a {
     background-color: #645335;
     color: #FEFCFF;
 }
 
+footer {
+    padding: 1.5em 0;
+}
+
 /* Removed bullet points from footer ul */
+footer h2,
 footer ul {
     list-style: none;
+    line-height: 2;
+    text-align: center;
 }
